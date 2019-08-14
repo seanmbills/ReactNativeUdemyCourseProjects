@@ -35,7 +35,7 @@ const reducer = (state, action) => {
                 return {...state, green: state.green + action.amount};
             }
         default:
-            return;
+            return state;
     }
 };
 
