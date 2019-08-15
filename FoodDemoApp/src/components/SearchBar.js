@@ -5,8 +5,11 @@ import {Feather } from '@expo/vector-icons'
 const SearchBar = () => {
     return (
         <View style = {styles.searchView}>
-            <Feather name="search" size={30}/>
-            <TextInput />
+            <Feather style={styles.searchIcon} name="search"/>
+            <TextInput style = {styles.textInput}
+                placeholder="Search"
+                placeholderTextColor="#686e72"
+            />
         </View>
     )
 }
@@ -17,6 +20,18 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 5,
         margin: 15,
+        flexDirection: 'row',
+    },
+    textInput: {
+        flex: 1,
+        padding: 5,
+        fontSize: 20,
+        color: 'black',
+    },
+    searchIcon: {
+        fontSize: 40,
+        alignSelf: 'center',
+        marginHorizontal: 10,
 
     }
 })
