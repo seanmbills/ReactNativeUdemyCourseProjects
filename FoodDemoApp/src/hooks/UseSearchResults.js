@@ -24,9 +24,9 @@ export default () => {
         yelp api and continuously re-rendering our screen, forcing
         us to run search yelp api over and over
     */
-    // useEffect(() => {
-    //     searchYelpApi('brewery')
-    // }, []) // <-- use of the empty brackets here helps us to only run this on original rendering of the screen
+    useEffect(() => {
+        searchYelpApi('brewery')
+    }, []) // <-- use of the empty brackets here helps us to only run this on original rendering of the screen
 
     return [searchYelpApi, searchResults, errorMessage]
 }
