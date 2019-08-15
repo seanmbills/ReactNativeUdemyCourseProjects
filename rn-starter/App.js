@@ -8,6 +8,7 @@ import ColorsScreen from './src/screens/ColorsScreen';
 import ColorAdjusterScreen from './src/screens/ColorAdjusterScreenReduced';
 import TextInputScreen from './src/screens/TextInputScreen';
 import BoxScreen from './src/screens/BoxScreen';
+import BoxDemo from './src/screens/BoxDemo';
 
 const navigator = createStackNavigator(
   {
@@ -20,6 +21,7 @@ const navigator = createStackNavigator(
     Adjuster: ColorAdjusterScreen,
     Input: TextInputScreen,
     Box: BoxScreen,
+    BoxDemo: BoxDemo,
     
   },
   {

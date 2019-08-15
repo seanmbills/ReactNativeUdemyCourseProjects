@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'black',
         height: 200,
-        alignItems: 'center'
+        alignItems: 'stretch'
         // default of alignItems is 'stretch'
         // alignItems: 'center',
         // alignItems: 'flex-end',
@@ -63,7 +63,10 @@ const styles = StyleSheet.create({
         // marginHorizontal: 20,
         // margin: 20,
         // flex: 4,
-        alignSelf: 'stretch'
+        // alignSelf: 'stretch'
+        // position: 'absolute',
+        ...StyleSheet.absoluteFillObject,
+        
     },
     textStyle3: {
         borderWidth: 3,
