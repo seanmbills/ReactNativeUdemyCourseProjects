@@ -4,6 +4,9 @@ import ResultDetails from './ResultDetails';
 import {withNavigation} from 'react-navigation'
 
 const ResultsList = ({listName, results, navigation}) => {
+    if (!results.length){
+        return null;
+    }
     return (
         <View style={styles.container}>
             <Text style={styles.listHeader}> {listName} </Text>
