@@ -14,17 +14,18 @@ const SearchScreen = () => {
     }
 
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={{flex:1}}>
             <SearchBar searchTerm={searchTerm}
                 onTermChange={setSearchTerm}
                 onSearchSubmit={() => searchYelpApi(searchTerm)}
             />
-            <Text>We have found {searchResults.length} results!</Text>
-            {errorMessage ? <Text>{errorMessage}</Text> : null}
-            <ResultsList results={filterResultsByPrice('$')} listName="Cost Effective" />
-            <ResultsList results={filterResultsByPrice('$$')} listName="More Expensive" />
-            <ResultsList results={filterResultsByPrice('$$$')} listName="Big Spender!" />
-        </ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                {errorMessage ? <Text>{errorMessage}</Text> : null}
+                <ResultsList results={filterResultsByPrice('$')} listName="Cost Effective" />
+                <ResultsList results={filterResultsByPrice('$$')} listName="More Expensive" />
+                <ResultsList results={filterResultsByPrice('$$$')} listName="Big Spender!" />
+            </ScrollView>
+        </View>
     )
 }
 
