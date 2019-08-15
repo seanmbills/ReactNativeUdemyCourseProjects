@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text, View, StyleSheet} from 'react-native'
+import { Directions } from 'react-native-gesture-handler';
 
 const BoxScreen = () => {
     return (
@@ -12,10 +13,21 @@ const BoxScreen = () => {
 }
 
 const styles = StyleSheet.create({
+    // the View here is the "parent" element
     viewStyle: {
         borderWidth: 2,
         borderColor: 'black',
+        // default of alignItems is 'stretch'
+        // alignItems: 'center',
+        // alignItems: 'flex-end',
+        // alignItems: 'flex-start',
+        
+        // default for flexDirection is "column", so setting it to this is uncommon
+        // flexDirection: 'row',
 
+        //default for justifyContent is 'flex-start' which puts things at top/start of view
+        // options include 'flex-start', 'center', 'space-between', 'space-around', etc.
+        justifyContent: 'center',
     },
     textStyle: {
         borderWidth: 3,
