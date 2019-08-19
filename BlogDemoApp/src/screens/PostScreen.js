@@ -21,8 +21,9 @@ PostScreen.navigationOptions = ({navigation}) => {
     return {
         headerRight: (
             <TouchableOpacity
-                onPress={() => navigation.navigate('Edit')}
-            >
+                onPress={() => {
+                    navigation.navigate('Edit', {id: navigation.getParam('id')})}
+                }>
                 <FontAwesome style={styles.icon} name='pencil' size={30}/>
             </TouchableOpacity>
         )
