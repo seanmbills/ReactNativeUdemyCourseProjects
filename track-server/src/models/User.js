@@ -35,11 +35,13 @@ userSchema.pre('save', function(next) {
                 return next(err)
             }
             user.password = hash
+            next()
         })
     })
 })
 
 userSchema.methods.comparePassword = function(enteredPassword) {
+    const user = this
     return new Promise((resolve, reject) => {
         bcrypt.compare(enteredPassword, user.password, (err, isMatch) => {
             if (err) {
