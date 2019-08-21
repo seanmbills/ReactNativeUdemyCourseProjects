@@ -5,25 +5,32 @@ import Spacer from '../components/Spacer'
 
 const SignupScreen = ({navigation}) => {
     return (
-        <>
-            <View>
-                {/* <Text style={{fontSize: 48}}>SignupScreen</Text>
-                <Button title="Go to Signin" onPress={() => navigation.navigate('Signin')}/>
-                <Button title="Go to Main flow" onPress={() => navigation.navigate('mainFlow')}/> */}
-                <Spacer>
-                    <Text h3>Sign Up for Tracker</Text>
-                </Spacer>
-                <Input label="Email"/>
-                <Spacer />
-                <Input label="Password"/>
-                <Spacer>
-                    <Button title="Sign Up"/>
-                </Spacer>
-            </View>
-        </>
+        <View style={styles.container}>
+            <Spacer>
+                <Text h3 style={{textAlign: 'center'}}>Sign Up for Tracker</Text>
+            </Spacer>
+            <Input label="Email"/>
+            <Spacer />
+            <Input label="Password"/>
+            <Spacer>
+                <Button title="Sign Up"/>
+            </Spacer>
+        </View>
     )
 }
 
-const styles = StyleSheet.create({})
+SignupScreen.navigationOptions = () => {
+    return {
+        header: null
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        justifyContent: 'center',
+        flex: 1,
+        marginBottom: 150
+    }
+})
 
 export default SignupScreen
